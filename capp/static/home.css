@@ -1,8 +1,8 @@
 /* Colors 
-Home, section 1 (head, background): #9fa7bf
-Home, section 1 (head, boxes): #568c63
-Home, section 2 (developers, background): #c5c8d9 
-Home, section 2 (developers, boxes): #49736f
+Home, section 1 (head, background): #A5D6A7 (Sanftes Grün)
+Home, section 1 (head, boxes): #81C784 (Helles Grün)
+Home, section 2 (developers, background): #C8E6C9 (Sehr sanftes Grün)
+Home, section 2 (developers, boxes): #388E3C (Dunkleres Waldgrün)
  */
 
 /* Utilities  */
@@ -12,16 +12,16 @@ p {
 }
 /* Section header_home */
 .section_header_home {
-  background-color:#9fa7bf;
+  background-color: #A5D6A7; /* Sanftes Grün */
 }
 .header_home {
   display: flex;  
   align-items: start;
-  background: #9fa7bf;
+  background: #A5D6A7; /* Sanftes Grün */
 }
 .header_home .box {
   flex: 1;
-  background: #9fa7bf;
+  background: #A5D6A7; /* Sanftes Grün */
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -31,41 +31,46 @@ p {
   justify-content: center;
 }
 .header_home .box:nth-of-type(1) {
-  flex-grow:2;
+  flex-grow: 2;
 }
 .header_home .box:nth-of-type(2) {
-  flex-grow:1;
+  flex-grow: 1;
 }
 .container_buttons_links_header_home {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 .container_buttons_links_header_home a:hover {
-  color: #9fa7bf;
+  color: #81C784; /* Helles Grün beim Hover */
+}
+.btn-primary {
+  background-color: #1B4D3E; /* Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  border: 1px solid #1B4D3E; /* Randfarbe */
 }
 .container_buttons_links_header_home btn {
   width: 100px;
   height: 100px;
-  background: #9fa7bf;
+  background: #81C784; /* Helles Grün */
   color: #fff;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
 }
 /* Section developers */
 .section_developers {
-  background-color:#c5c8d9;
+  background-color: #C8E6C9; /* Sehr sanftes Grün */
 }
 .developers {
   display: flex;  
   align-items: start;
-  background: #c5c8d9;
+  background: #C8E6C9; /* Sehr sanftes Grün */
 }
 .developers .box {
   flex: 1;
-  background: #49736f;
+  background: #388E3C; /* Dunkleres Waldgrün */
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -75,17 +80,17 @@ p {
   justify-content: center;
 }
 .developers .box:nth-of-type(1) {
-  flex-grow:4;
+  flex-grow: 4;
 }
 .developers .box:nth-of-type(2) {
-  flex-grow:4;
+  flex-grow: 4;
 }
 .developers .box:nth-of-type(3) {
-  flex-grow:4;
+  flex-grow: 4;
 }
 .developers .box2 {
   flex: 1;
-  background: #49736f;
+  background: #388E3C; /* Dunkleres Waldgrün */
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -95,20 +100,20 @@ p {
   justify-content: center;
 }
 .developers .box2:nth-of-type(1) {
-  flex-grow:4;
+  flex-grow: 4;
 }
 .developers .box2:nth-of-type(2) {
-  flex-grow:4;
+  flex-grow: 4;
 }
 .developers .box2:nth-of-type(3) {
-  flex-grow:4;
-  background: #c5c8d9;
+  flex-grow: 4;
+  background: #C8E6C9; /* Sehr sanftes Grün */
 }
 .section_container_buttons_developers {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   padding: 0px 0px;
   margin: 0px 0px;
 }
@@ -119,18 +124,18 @@ p {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #49736f;
-  border: 2px solid  #c5c8d9;
+  background-color: #388E3C; /* Dunkleres Waldgrün */
+  border: 2px solid #C8E6C9; /* Sehr sanftes Grün */
 }
 .btn_developers:hover {
   color: #fff;
-  background-color: #c5c8d9;
-  border: 2px solid #c5c8d9;
+  background-color: #C8E6C9; /* Sehr sanftes Grün beim Hover */
+  border: 2px solid #C8E6C9; /* Sehr sanftes Grün */
   text-decoration: none;
 }
 
-
-@media (max-width:768px) { 
+/* Mobile responsiveness */
+@media (max-width: 768px) { 
   .header_home {
     flex-direction: column;
   } 
