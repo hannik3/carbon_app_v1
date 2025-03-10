@@ -45,7 +45,7 @@ img {
 }
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color: #4CAF50; /* Waldgrün */
+  background-color: #314736; /* Waldgrün */
 }
 .carbon_app_navbar {
   display: flex;
@@ -53,11 +53,11 @@ img {
   justify-content: flex-start;
   height: 70px;
   align-items: center;
-  background-color: #4CAF50; /* Waldgrün */
+  background-color: #314736; /* Waldgrün */
   padding: 0 0px;
 }
 .carbon_app_navbar a {
-  color: #2C6B2F; /* Dunkleres Waldgrün */
+  color: #90a897; /* Dunkleres Waldgrün */
   padding: 10px 20px;
   margin: 0 5px;
   font-size: 20px;
@@ -74,20 +74,85 @@ img {
   font-weight: 400;
 }
 .text-logo {
-  color: #81C784; /* Helles Grün für Logo */
+  color: #90a897; /* Helles Grün für Logo */
 }
 /* Footer  */
-.section_footer{
-  background-color: #4CAF50; /* Waldgrün */
+/* Wellen-Design */
+.footer-wave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #314736;
 }
-.footer {
+
+.footer-wave-svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+.footer-wave-path {
+  fill: #d8cdc3;
+}
+.footer-wave-svg {
+  background-color: transparent;
+  display: block;
+  height: 30px;
+  position: relative;
+  top: -1px;
+  width: 100%;
+}
+
+/* Footer-Styling */
+.footer-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 70px;
+  flex-direction: column;
   align-items: center;
-  background-color: #4CAF50; /* Waldgrün */
-  padding: 0 0px;
+  justify-content: center;
+  width: 100%;
+  background-color: #314736; /* Waldgrün */
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; /* Abstand zwischen den Spalten */
+  text-align: center;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column a {
+  font-size: 24px;
+  margin: 5px;
+  color: white;
+}
+
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #314736;
+  width: 100%;
+  padding: 10px;
 }
 
 /* Media query */

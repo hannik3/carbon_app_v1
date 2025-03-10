@@ -12,16 +12,16 @@ p {
 }
 /* Section header_home */
 .section_header_home {
-  background-color: #A5D6A7; /* Sanftes Grün */
+  background-color: #314736; /* Sanftes Grün */
 }
 .header_home {
   display: flex;  
   align-items: start;
-  background: #A5D6A7; /* Sanftes Grün */
+  background: #314736; /* Sanftes Grün */
 }
 .header_home .box {
   flex: 1;
-  background: #A5D6A7; /* Sanftes Grün */
+  background: #314736; /* Sanftes Grün */
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -59,18 +59,29 @@ p {
   justify-content: center;
   align-items: center;
 }
+.header-wave-svg {
+  background-color: transparent;
+  display: block;
+  height: 30px;
+  position: relative;
+  width: 100%;
+  transform: scaleY(-1);
+}
+.header-wave-path {
+  fill: #d8cdc3;
+}
 /* Section developers */
 .section_developers {
-  background-color: #C8E6C9; /* Sehr sanftes Grün */
+  background-color: #d8cdc3; /* Sehr sanftes Grün */
 }
 .developers {
   display: flex;  
   align-items: start;
-  background: #C8E6C9; /* Sehr sanftes Grün */
+  background: #d8cdc3; /* Sehr sanftes Grün */
 }
 .developers .box {
   flex: 1;
-  background: #388E3C; /* Dunkleres Waldgrün */
+  background: #90a897; /* Dunkleres Waldgrün */
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -90,7 +101,7 @@ p {
 }
 .developers .box2 {
   flex: 1;
-  background: #388E3C; /* Dunkleres Waldgrün */
+  background: #90a897; /* Dunkleres Waldgrün */
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -107,7 +118,7 @@ p {
 }
 .developers .box2:nth-of-type(3) {
   flex-grow: 4;
-  background: #C8E6C9; /* Sehr sanftes Grün */
+  background: #90a897; /* Sehr sanftes Grün */
 }
 .section_container_buttons_developers {
   display: flex;

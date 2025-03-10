@@ -69,18 +69,42 @@
 
         {% block content %} {% endblock %}
 
-        <section class="section_footer">
-          <div class="container">
-            <div class="footer">
-              <h1>
-                Carbon App 
-                <a href="#">
-                  <i class="fa-solid fa-circle-up" style="color: #568c63"></i>
-                </a>
-              </h1>
+        <div class="footer-wave">
+          <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
+              c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+          </svg>
+        </div>
+        
+        <div class="footer-container">
+          <div class="footer-content">
+            <!-- Erste Spalte: Social Icons -->
+            <div class="footer-column">
+              <a class="fa-brands fa-instagram" href="https://www.instagram.com/movegreen2024/"></a>
+              <a class="fa-solid fa-circle-up" href="#"></a>
+            </div>
+        
+            <!-- Zweite Spalte: E-Mail, Telefon, Adresse -->
+            <div class="footer-column">
+              <p><i class="fa-regular fa-envelope"></i> support@movegreen.com</p>
+              <p><i class="fa-solid fa-phone"></i> +47 123 45 678</p>
+              <p><i class="fa-solid fa-location-dot"></i> Helleveien 30, 5045 Bergen, Norway</p>
             </div>
           </div>
-        </section>
+        
+          <!-- Links in einer Zeile -->
+          <div class="footer-links">
+            <a href="/green_digitalization_course/NHH/2024/group1/methodology">Methodology</a>
+            <a href="/green_digitalization_course/NHH/2024/group1/carbon_calc">Carbon Calculator</a>
+            <a href="/green_digitalization_course/NHH/2024/group1/login">Log in</a>
+            <a href="/green_digitalization_course/NHH/2024/group1/register">Register</a>
+          </div>
+        
+          <!-- Footer-Text -->
+          <div class="footer">
+            <p>Carbon App | Group 4 NHH, spring 2025</p>
+          </div>
+        </div>
 
         <!-- Bootstrap -->
         <!-- Question Accordion -->

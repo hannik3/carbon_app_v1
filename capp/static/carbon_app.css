@@ -18,16 +18,16 @@ h4 {
 }
 /* Section header */
 .section_header_carbon_app {
-  background-color: #388E3C; /* Dunkleres Grün */
+  background-color: #90a897; /* Dunkleres Grün */
 }
 .header_carbon_app {
   display: flex;  
   align-items: start;
-  background: #388E3C; /* Dunkleres Grün */
+  background: #90a897; /* Dunkleres Grün */
 }
 .header_carbon_app .box {
   flex: 1;
-  background: #388E3C; /* Dunkleres Grün */
+  background: #90a897; /* Dunkleres Grün */
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -49,12 +49,12 @@ h4 {
   flex-wrap: wrap;
 }
 .container_buttons_links_header_carbon_app a:hover {
-  color: #388E3C; /* Dunkleres Grün für Hover */
+  color: #90a897; /* Dunkleres Grün für Hover */
 }
 .container_buttons_links_header_carbon_app btn {
   width: 100px;
   height: 100px;
-  background: #388E3C; /* Dunkleres Grün */
+  background: #90a897; /* Dunkleres Grün */
   color: #fff;
   display: flex;
   justify-content: center;
