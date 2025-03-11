@@ -18,16 +18,16 @@ h4 {
 }
 /* Section header */
 .section_header_carbon_app {
-  background-color: #90a897; /* Dunkleres Grün */
+  background-color: #314736; /* Dunkleres Grün */
 }
 .header_carbon_app {
   display: flex;  
   align-items: start;
-  background: #90a897; /* Dunkleres Grün */
+  background: #314736; /* Dunkleres Grün */
 }
 .header_carbon_app .box {
   flex: 1;
-  background: #90a897; /* Dunkleres Grün */
+  background: #314736; /* Dunkleres Grün */
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -59,6 +59,24 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header-wave-svg {
+  background-color: transparent;
+  display: block;
+  height: 30px;
+  position: relative;
+  width: 100%;
+  transform: scaleY(-1);
+  margin-bottom: -2px;
+}
+.header-wave-path {
+  fill: #d8cdc3;
+}
+.header-wave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #314736;
 }
 
 /* Mobile responsiveness */

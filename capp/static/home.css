@@ -46,9 +46,9 @@ p {
   color: #81C784; /* Helles Grün beim Hover */
 }
 .btn-primary {
-  background-color: #1B4D3E; /* Hintergrundfarbe */
+  background-color: #d8cdc3; /* Hintergrundfarbe */
   color: white; /* Textfarbe */
-  border: 1px solid #1B4D3E; /* Randfarbe */
+  border: 0px solid #1B4D3E; /* Randfarbe */
 }
 .container_buttons_links_header_home btn {
   width: 100px;
@@ -66,10 +66,20 @@ p {
   position: relative;
   width: 100%;
   transform: scaleY(-1);
+  margin-bottom: -2px;
 }
 .header-wave-path {
   fill: #d8cdc3;
 }
+.header-wave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #314736;
+}
+
+
+
 /* Section developers */
 .section_developers {
   background-color: #d8cdc3; /* Sehr sanftes Grün */
@@ -135,13 +145,11 @@ p {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #388E3C; /* Dunkleres Waldgrün */
-  border: 2px solid #C8E6C9; /* Sehr sanftes Grün */
+  background-color: #1B4D3E; /* Dunkleres Waldgrün */
+  border: 0px solid #C8E6C9; /* Sehr sanftes Grün */
 }
 .btn_developers:hover {
-  color: #fff;
-  background-color: #C8E6C9; /* Sehr sanftes Grün beim Hover */
-  border: 2px solid #C8E6C9; /* Sehr sanftes Grün */
+  color: #81C784;  /* Sehr sanftes Grün */
   text-decoration: none;
 }
 
