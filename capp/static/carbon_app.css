@@ -81,12 +81,12 @@ h4 {
 
 /* Section carbon_app_new_entry_main */
 .section_carbon_app_new_entry_main {
-  background-color:#c5c8d9;
+  background-color:#d8cdc3;
 }
 .carbon_app_new_entry_main {
   display: flex;  
   align-items: start;
-  background: #c5c8d9;
+  background: #d8cdc3;
 }
 .carbon_app_new_entry_main .box {
   flex: 1;
@@ -138,11 +138,11 @@ h4 {
 /*Container new_entry */
 .new_entry {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
   }  
 .new_entry .container {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
 }
 .new_entry .container {
   display: flex;
@@ -151,7 +151,7 @@ h4 {
 }
 .new_entry .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #d8cdc3;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -185,11 +185,11 @@ h4 {
 /*Container table_main */
 .table_main {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
   }  
 .table_main .container {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
 }
 .table_main .container {
   display: flex;
@@ -198,7 +198,7 @@ h4 {
 }
 .table_main .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #d8cdc3;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -232,11 +232,11 @@ h4 {
 /*Container main menu */
 .main_menu {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
   }  
 .main_menu .container {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
 }
 .main_menu .container {
   display: flex;
@@ -245,7 +245,7 @@ h4 {
 }
 .main_menu .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #d8cdc3;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
