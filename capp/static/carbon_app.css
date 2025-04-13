@@ -316,55 +316,6 @@ h4 {
   text-align:center;
 }  
 /*End container two_emissions_graphs*/
-
-/*Container main menu */
-.main_menu {
-  display: flex;
-  background: #c5c8d9;
-  }  
-.main_menu .container {
-  display: flex;
-  background: #c5c8d9;
-}
-.main_menu .container {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-}
-.main_menu .container .box {
-  flex: 1;
-  background: #c5c8d9;
-  border-radius: 2px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-}  
-.main_menu .container  .box:nth-of-type(1) {
-  flex-grow:1;
-  background: #fff;
-  border-radius: 10px;
-  margin: 0px 0px;
-  padding: 0px 0px;
-  text-align:left;
-}  
-.main_menu .container  .box:nth-of-type(2) {
-  flex-grow:6;
-  max-width: 450px;
-  background: #568c63;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-}  
-.main_menu .container  .box:nth-of-type(3) {
-  flex-grow:1;
-  background: #fff;
-  border-radius: 10px;
-  margin: 0px 0px;
-  padding: 0px 0px;
-  text-align:left;
-}
-/*End container main menu*/
 /*Container buttons section main menu */
 .container_buttons_links_main_menu {
   display: flex;
