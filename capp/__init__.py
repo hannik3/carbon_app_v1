@@ -13,7 +13,7 @@ application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
 application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
 ### Code computer
-# application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
+#application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 # DBVAR = 'sqlite:///user.db'
 # application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
 # application.config['SQLALCHEMY_BINDS'] ={'transport': 'sqlite:///transport.db'}
