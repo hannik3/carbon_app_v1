@@ -42,9 +42,16 @@
         <section class="section_carbon_app_navbar">
           <div class="container">
             <div class="carbon_app_navbar">
-              <h1 class="logo">
-                <span class="text-logo"><i class="fa-solid fa-leaf"></i> Carbon</span> App
-              </h1>
+              <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="{{ url_for('home.home_home') }}">
+                  <img 
+                    src="{{ url_for('static', filename='images/CarbonWise_no_background_strict.png') }}" 
+                    alt="CarbonWise Logo" 
+                    style="width: 180px;"/>
+                </a>
+             
+              </div
+              
               {% if current_user.is_authenticated %}
               <nav>
                 <ul>
