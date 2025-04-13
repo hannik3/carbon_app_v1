@@ -280,11 +280,11 @@ h4 {
 /*Container two_emissions_graphs */
 .two_emissions_graphs {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
   }  
 .two_emissions_graphs .container {
   display: flex;
-  background: #c5c8d9;
+  background: #d8cdc3;
 }
 .two_emissions_graphs .container {
   display: flex;
@@ -293,7 +293,7 @@ h4 {
 }
 .two_emissions_graphs .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #d8cdc3;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
