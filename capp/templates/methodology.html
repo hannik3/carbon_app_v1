@@ -67,15 +67,34 @@
                         <h4>Buses</h4>
                         <p class="text-left">
                           All of CarbonWise's calculations use a standard formula that can be applied uniformly across all vehicle types:
- 
+                          <br>
+                          
                           \(CO2 = d*ef/p\)
-                           
+                          <br> 
                           Where:
                           -   	\(CO2\) = carbon dioxide emissions in grams
+                          <br>
                           -   	\(d\) = distance travelled (in kilometres)
+                          <br>
                           -   	\(ef\) = emission factor (in grams CO₂ per kilometer)
+                          <br>
                           -   	\(p\) = number of passengers
-                            
+                          <br>
+                          For electric vehicles, a specific variant of this formula is used to reflect electricity-related emissions better:
+                          <br>
+                            \(CO2 = d*ec*ci/p\)
+                          <br> 
+                          Where:
+                          -   	\(CO2\) = carbon dioxide emissions in grams
+                          <br>
+                          -   	\(d\) = distance travelled (in kilometres)
+                          <br>
+                          -   	\(ec\) = energy consumption (in kWh/km)
+                          <br>
+                          -   	\(ci\) = carbon intensity of electricity production (in gCO₂/kWh), here set at 240 gCO₂/kWh
+                          <br>
+                          -   	\(p\) = number of passengers
+                          <br>
                         </p>
                     </li>
                     <li>
