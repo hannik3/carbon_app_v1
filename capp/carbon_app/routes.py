@@ -3,7 +3,7 @@ from capp.models import Transport
 from capp import db
 from datetime import timedelta, datetime
 from flask_login import login_required, current_user
-from capp.carbon_app.forms import BusForm, CarForm, PlaneForm, MotorbikeForm, BicycleForm, WalkForm, TrainForm
+from capp.carbon_app.forms import BusForm, CarForm, PlaneForm, MotorbikeForm, BicycleForm, WalkForm, TrainForm, FerryForm
 import json
 
 carbon_app=Blueprint('carbon_app',__name__)
@@ -26,6 +26,11 @@ efco2 = {
     'Plane': {
         'Economy': 0.128,          # Economy class flights emit 128g CO₂ per passenger-km
         'Business/First': 0.284    # Business/first class flights emit 284g CO₂ per passenger-km
+    },
+    'Ferry': {
+        'Diesel': 0.11131,         # No new data provided; kept original value
+        'CNG': 0.1131,             # No new data provided; kept original value
+        'No Fossil Fuel': 0        # Zero emissions for non-fossil fuel ferries
     },
     'Train': {
         'Europe Electric': 0.026,
@@ -122,7 +127,32 @@ def new_entry_plane():
         db.session.add(emissions)
         db.session.commit()
         return redirect(url_for('carbon_app.your_data'))
-    return render_template('carbon_app/new_entry_plane.html', title='new entry plane', form=form)  
+    return render_template('carbon_app/new_entry_plane.html', title='new entry plane', form=form)
+
+#New entry ferry
+@carbon_app.route('/carbon_app/new_entry_ferry', methods=['GET','POST'])
+@login_required
+def new_entry_ferry():
+    form = FerryForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Ferry'
+        # kms = request.form['kms']
+        # fuel = request.form['fuel_type']
+
+        co2 = float(kms) * efco2[transport][fuel]
+        total = co2
+
+        co2 = float("{:.2f}".format(co2))
+        total = float("{:.2f}".format(total))
+
+        emissions = Transport(kms=kms, transport=transport, fuel=fuel, co2=co2, total=total, author=current_user)
+        db.session.add(emissions)
+        db.session.commit()
+        return redirect(url_for('carbon_app.your_data'))
+    return render_template('carbon_app/new_entry_ferry.html', title='new entry ferry', form=form)     
+
 
 #New entry motorbike
 @carbon_app.route('/carbon_app/new_entry_motorbike', methods=['GET','POST'])
@@ -228,6 +258,12 @@ def your_data():
     else:
         emission_transport[2]
 
+    if 'Ferry' in second_tuple_elements:
+        index_ferry = second_tuple_elements.index('Ferry')
+        emission_transport[3]=first_tuple_elements[index_ferry]
+    else:
+        emission_transport[3]
+
     if 'Motorbike' in second_tuple_elements:
         index_motorbike = second_tuple_elements.index('Motorbike')
         emission_transport[4]=first_tuple_elements[index_motorbike]
@@ -268,6 +304,12 @@ def your_data():
         kms_transport[2]=first_tuple_elements[index_car]
     else:
         kms_transport[2]
+
+    if 'Ferry' in second_tuple_elements:
+        index_ferry = second_tuple_elements.index('Ferry')
+        kms_transport[3]=first_tuple_elements[index_ferry]
+    else:
+        kms_transport[3]
 
     if 'Motorbike' in second_tuple_elements:
         index_motorbike = second_tuple_elements.index('Motorbike')
@@ -332,4 +374,3 @@ def delete_emission(entry_id):
     flash("Entry deleted", "success")
     return redirect(url_for('carbon_app.your_data'))
     
-  
