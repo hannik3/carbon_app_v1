@@ -17,7 +17,10 @@
               Please, enter the number of kilometers.
             </li>
             <li>
-              Please, select the type of fuel
+              Please, select the type of fuel.
+            </li>
+            <li>
+              Please, enter the number of people on the bike.
             </li>
           </ol>
         </p>
@@ -53,6 +56,21 @@
                     {% endif %}
                 </div>
 
+                <!-- New Input for Number of People -->
+                <div class="form-group">
+                    {{ form.people_count.label(class="form-control-label") }}
+                    {% if form.people_count.errors %}
+                        {{ form.people_count(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.people_count.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.people_count(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
               </fieldset>
               </br>
               <div class="form-group">
@@ -66,5 +84,4 @@
   </div>
 </section> 
 
-        
 {% endblock content %}
