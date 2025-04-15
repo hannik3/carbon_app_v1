@@ -25,10 +25,11 @@ efco2 = {
     },
     'Plane': {
         'Economy': 0.128,          # Economy class flights emit 128g CO₂ per passenger-km
-        'Business/First': 0.280    # Business/first class flights emit 280g CO₂ per passenger-km
+        'Business/First': 0.284    # Business/first class flights emit 284g CO₂ per passenger-km
     },
     'Train': {
-        'Electric': 0.007,         # Electric trains in Norway emit 7g CO₂ per passenger-km
+        'Europe Electric': 0.026,
+        'Norway Electric': 0.007,  # Electric trains in Norway emit 7g CO₂ per passenger-km
         'Diesel': 0.091            # Diesel trains emit 91g CO₂ per passenger-km
     },
     'Motorbike': {
@@ -81,12 +82,13 @@ def new_entry_car():
     form = CarForm()
     if form.validate_on_submit():
         kms = form.kms.data
+        person = form.person.data
         fuel = form.fuel_type.data
         transport = 'Car'
         # kms = request.form['kms']
         # fuel = request.form['fuel_type']
 
-        co2 = float(kms) * efco2[transport][fuel]
+        co2 = (float(kms) * efco2[transport][fuel])/person
         total = co2
 
         co2 = float("{:.2f}".format(co2))

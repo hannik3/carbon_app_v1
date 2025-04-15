@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import  SubmitField,  SelectField,  FloatField
+from wtforms import  SubmitField,  SelectField,  FloatField, IntegerField
 from wtforms.validators import InputRequired
 
 class BusForm(FlaskForm):
@@ -10,6 +10,7 @@ class BusForm(FlaskForm):
 
 class CarForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
+  person = IntegerField('Persons')
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
     choices=[('Petrol', 'Petrol'), ('Diesel', 'Diesel'),('LNG', 'LNG'), ('Electric', 'Electric'), ('Sports Car', 'Sports Car'),('Family Car', 'Family Car'),('Small Car', 'Small Car'),  ('No Fossil Fuel', 'No Fossil Fuel')])
   submit = SubmitField('Submit')  

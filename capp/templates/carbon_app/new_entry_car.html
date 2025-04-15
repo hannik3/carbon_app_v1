@@ -17,6 +17,9 @@
               Please, enter the number of kilometers.
             </li>
             <li>
+              Please, enter the number of persons.
+            </li>
+            <li>
               Please, select the type of fuel
             </li>
           </ol>
@@ -38,6 +41,20 @@
                         {{ form.kms(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
+                <div class="form-group">
+                  {{ form.person.label(class="form-control-label") }}
+                  {% if form.person.errors %}
+                      {{ form.person(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.person.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.person(class="form-control form-control-lg") }}
+                  {% endif %}
+              </div>
 
                 <div class="form-group">
                     {{ form.fuel_type.label(class="form-control-label") }}
