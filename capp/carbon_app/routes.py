@@ -28,9 +28,7 @@ efco2 = {
         'Business/First': 0.284    # Business/first class flights emit 284g CO₂ per passenger-km
     },
     'Ferry': {
-        'Diesel': 0.11131,         # No new data provided; kept original value
-        'CNG': 0.1131,             # No new data provided; kept original value
-        'No Fossil Fuel': 0        # Zero emissions for non-fossil fuel ferries
+        'Fuel Oil': 0.114,         # No new data provided; kept original value
     },
     'Train': {
         'Europe Electric': 0.026,
