@@ -9,46 +9,23 @@ import json
 carbon_app=Blueprint('carbon_app',__name__)
 
 #Emissions factor per transport in kg per passemger km
-efco2 = {
-    'Bus': {
-        'Diesel': 0.030  # Diesel buses emit ~30g CO₂ per passenger-km
-    },
-    'Car': {
-        'Petrol': 0.153,           # Petrol cars emit 153g CO₂ per km
-        'Diesel': 0.145,           # Diesel cars emit 145g CO₂ per km
-        'LNG': 0.133,              # LNG-fueled cars emit 133g CO₂ per km
-        'Electric': 0.003006,      # Electric cars: 18g CO₂/kWh * 0.167 kWh/km = ~3g CO₂/km
-        'Sports Car': 0.250,       # Sports cars (usually petrol) emit 250g CO₂ per km
-        'Family Car': 0.158,       # Family cars emit 158g CO₂ per km
-        'Small Car': 0.104,        # Small cars emit 104g CO₂ per km
-        'No Fossil Fuel': 0        # Zero emissions for non-fossil fuel cars
-    },
-    'Plane': {
-        'Economy': 0.128,          # Economy class flights emit 128g CO₂ per passenger-km
-        'Business/First': 0.280    # Business/first class flights emit 280g CO₂ per passenger-km
-    },
-    'Ferry': {
-        'Diesel': 0.11131,         # No new data provided; kept original value
-        'CNG': 0.1131,             # No new data provided; kept original value
-        'No Fossil Fuel': 0        # Zero emissions for non-fossil fuel ferries
-    },
-    'Train': {
-        'Electric': 0.007,         # Electric trains in Norway emit 7g CO₂ per passenger-km
-        'Diesel': 0.091            # Diesel trains emit 91g CO₂ per passenger-km
-    },
-    'Motorbike': {
-        'Petrol': 0.114,           # Motorcycles emit 114g CO₂ per km
-        'No Fossil Fuel': 0        # Very rare; but counted as zero emissions if electric
-    },
-    'Bicycle': {
-        'No Fossil Fuel': 0        # Bicycles have zero direct emissions
-    },
-    'Walk': {
-        'No Fossil Fuel': 0        # Walking has zero direct emissions
-    }
-}
-
-
+#Data from: http://efdb.apps.eea.europa.eu/?source=%7B%22query%22%3A%7B%22match_all%22%3A%7B%7D%7D%2C%22display_type%22%3A%22tabular%22%7D
+efco2={'Bus':{'Diesel':0.10231,'CNG':0.08,'Petrol':0.10231,'No Fossil Fuel':0},
+    'Car':{'Petrol':0.18592,'Diesel':0.16453,'No Fossil Fuel':0},
+    'Plane':{'Petrol':0.24298},
+    'Ferry':{'Diesel':0.11131, 'CNG':0.1131, 'No Fossil Fuel':0},
+    'Motorbike':{'Petrol':0.09816,'No Fossil Fuel':0},
+    'Scooter':{'No Fossil Fuel':0},
+    'Bicycle':{'No Fossil Fuel':0},
+    'Walk':{'No Fossil Fuel':0}}
+efch4={'Bus':{'Diesel':2e-5,'CNG':2.5e-3,'Petrol':2e-5,'No Fossil Fuel':0},
+    'Car':{'Petrol':3.1e-4,'Diesel':3e-6,'No Fossil Fuel':0},
+    'Plane':{'Petrol':1.1e-4},
+    'Ferry':{'Diesel':3e-5, 'CNG':3e-5,'No Fossil Fuel':0},
+    'Motorbike':{'Petrol':2.1e-3,'No Fossil Fuel':0},
+    'Scooter':{'No Fossil Fuel':0},
+    'Bicycle':{'No Fossil Fuel':0},
+    'Walk':{'No Fossil Fuel':0}}
 
 #Carbon app, main page
 @carbon_app.route('/carbon_app')
