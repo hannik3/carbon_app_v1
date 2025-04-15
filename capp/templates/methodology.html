@@ -1,150 +1,141 @@
-{% extends "layout.html" %}
-{% block content %}
-  
+{% extends "layout.html" %} {% block content %}
+
 <!-- Header -->
 <section class="section_header_methodology">
-    <div class="container">
-  
-      <div class="header">
-        <div class="box"> 
-          <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
-          <p style="text-align:left;">
-             Our methodology explains how carbon emissions are calculated when a user enters their transportation data into our Carbon Application. By considering factors such as travel distance, transport mode, and fuel type, we ensure accurate and reliable emissions results to help users understand and reduce their carbon footprint.
-          </p>
-          <div class="container_buttons_links_header">
-            <div class="btn">
-                <a href="{{ url_for('static', filename='documents/carbon_methodology_report.pdf') }}" class="btn btn-primary btn-lg mr-2" style="background-color:#407364;" target="_blank">
-                    Paper
-                </a>
-            </div>
-            <div class="btn">
-                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#407364;">Carbon App</a>
-            </div>
-          </div>  
-        </div>
-        <div class="box">
-          <img 
-            src="{{url_for('static', filename='icons/methodology1.svg')}}"
-            width="325" 
-            height="325"
-            alt=""/>
+  <div class="container">
+    <div class="header">
+      <div class="box">
+        <h1 style="font-size: 55px">
+          <span class="text-logo"> Methodology</span>
+        </h1>
+        <p style="text-align: left">
+          Our methodology explains how carbon emissions are calculated when a
+          user enters their transportation data into our Carbon Application. By
+          considering factors such as travel distance, transport mode, and fuel
+          type, we ensure accurate and reliable emissions results to help users
+          understand and reduce their carbon footprint.
+        </p>
+        <div class="container_buttons_links_header">
+          <div class="btn">
+            <a
+              href="{{ url_for('static', filename='documents/carbon_methodology_report.pdf') }}"
+              class="btn btn-primary btn-lg mr-2"
+              style="background-color: #407364"
+              target="_blank"
+            >
+              Paper
+            </a>
+          </div>
+          <div class="btn">
+            <a
+              href="{{url_for('carbon_app.carbon_app_home')}}"
+              class="btn btn-primary btn-lg mr-2"
+              ,
+              style="background-color: #407364"
+              >Carbon App</a
+            >
+          </div>
         </div>
       </div>
-      
+      <div class="box">
+        <img
+          src="{{url_for('static', filename='icons/methodology1.svg')}}"
+          width="325"
+          height="325"
+          alt=""
+        />
+      </div>
     </div>
-    <div class="header-wave">
-        <svg class="header-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
-          <path class="header-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
-        </svg>
-    </div>
+  </div>
+  <div class="header-wave">
+    <svg
+      class="header-wave-svg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 100"
+      preserveAspectRatio="none"
+    >
+      <path
+        class="header-wave-path"
+        d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+      ></path>
+    </svg>
+  </div>
   <!-- MathJax CSS -->
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</section> 
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+</section>
 
 <!-- Methodology -->
 <section class="section_body_methodology">
-    <div class="container">
-  
-       
+  <div class="container">
+    <!--Enumerated list (table with one column)-->
+    <div
+      class="methodology"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      "
+    >
+      <h1>Our numbers and formulas</h1>
+      <p>Here are the numbers and formulas behind our carbon calculator</p>
+      <div class="box_table1"></div>
+      <div class="box_table1">
+        <h4>Formulas</h4>
+        <p class="text-center">
+          All of CarbonWise's calculations use a standard formula that can be
+          applied uniformly across all vehicle types:
+          <br />
 
-        <div class="methodology" style="display:block;">
-            <h1 style="text-align:center;"> Our numbers and formulas</h1>
-            <p>
-              Here are the numbers and formulas behind our carbon calculator
-            </p> 
-        </div>
-
-        
-
-        <!--Enumerated list (table with one column)-->
-        <div class="methodology " style="display: flex; flex-direction: column;">              
-           
-            <div class="box_table1">
-                <ol>
-                    <li>
-                        <h4>Formulas</h4>
-                        <p class="text-left">
-                          All of CarbonWise's calculations use a standard formula that can be applied uniformly across all vehicle types:
-                          <br>
-                          
-                          \(CO2 = d*ef/p\)
-                          <br> 
-                          Where:
-                          -   	\(CO2\) = carbon dioxide emissions in grams
-                          <br>
-                          -   	\(d\) = distance travelled (in kilometres)
-                          <br>
-                          -   	\(ef\) = emission factor (in grams CO₂ per kilometer)
-                          <br>
-                          -   	\(p\) = number of passengers
-                          <br>
-                          For electric vehicles, a specific variant of this formula is used to reflect electricity-related emissions better:
-                          <br>
-                            \(CO2 = d*ec*ci/p\)
-                          <br> 
-                          Where:
-                          -   	\(CO2\) = carbon dioxide emissions in grams
-                          <br>
-                          -   	\(d\) = distance travelled (in kilometres)
-                          <br>
-                          -   	\(ec\) = energy consumption (in kWh/km)
-                          <br>
-                          -   	\(ci\) = carbon intensity of electricity production (in gCO₂/kWh), here set at 240 gCO₂/kWh
-                          <br>
-                          -   	\(p\) = number of passengers
-                          <br>
-                        </p>
-                    </li>
-                    <li>
-                      <h4>Cars</h4>
-                        <p class="text-left">
-                            With the purpose of accuracy, the passenger car has different options for users to choose from depending on the type of vehicle they use: 
-                            <br>
-                          Petrol vehicles, which on average emit 153g of CO2 per km.
-                          <br>
-                            Diesel vehicles, which on average emit 145g of CO2 per km.
-                          <br>
-                            LNG-fueled vehicles, on average, emit 133g of CO2 per km (ADEME Carbon Base, 2024).
-                          <br>
-                            	Moreover, to make more tailored calculations, the calculator further includes different types of vehicles based on their functionality, as follows:  
-                          <br>
-                            On average, sports cars run essentially on petrol, emitting 250g of CO2 per km.
-                          <br>
-                            Family cars emit, on average, 158g of CO2 per km.
-                          <br>
-                            Small cars emit 104g of CO2 per km (ADEME Carbon Base, 2024).
-                           <br> 
-                            Capitalizing on cleaner energy sources in most countries, electric cars consume about 0.167 kWh/km. We will thus arbitrarily set ec to 0.167. As we are currently opening the carbon calculator to Norway, we will also set ci to 18g/kWh. To compare with non-electric vehicles, this means an emission factor of equal to 240*0.167= 40,08.
-
-                        </p>
-                    </li>
-                    <li>
-                      <h4>Planes</h4>
-                        <p class="text-left">
-                            Air travel is one of the most carbon-emitting modes of transport. An economy-class flight emits around 128 g CO₂/km per passenger, and emissions increase to over 284g CO₂/pkm when business and first-class travel. Short flights are more carbon-dense per kilometre due to fuel-guzzling takeoffs and landings; these estimates are based on Framtiden I våre Hender 2024 statistics. 
-
-                        </p>
-                    </li>
-                    <li>
-                      <h4>Buses and Trains</h4>
-                        <p class="text-left">
-                            Electric trains in Europe emit around 26 g CO₂/pkm. We will make the distinction between electric trains, although predominant in Europe, and diesel-based trains, which emit 91g CO₂/pkm.
-                        <br>
-                          Diesel buses emit roughly 30 g CO₂/pkm
-                        </p>
-                    </li>
-                    <li>
-                      <h4>Motorcycles, ferries and 0-carbon means of transportation</h4>
-                      <p class="text-left">
-                          Most motorcycles are petrol-powered, with approximately 114 g CO₂/pkm emissions 
-                        <br>
-                        Ferries are very typical of coastal waters like Norway, and emit around 186 g CO₂/km per passenger.
-                        <br>
-                        Walking annd cycling have zero direct emissions and are broadly regarded as the most sustainable transport modes. 
-                      </p>
-                  </li>
-            </div>
+          \(CO2 = d*ef/p\)
+          <br />
+          Where: - \(CO2\) = carbon dioxide emissions in grams
+          <br />
+          - \(d\) = distance travelled (in kilometres)
+          <br />
+          - \(ef\) = emission factor (in grams CO₂ per kilometer)
+          <br />
+          - \(p\) = number of passengers
+          <br /><br />
+          For electric vehicles, a specific variant of this formula is used to
+          reflect electricity-related emissions better:
+          <br />
+          \(CO2 = d*ec*ci/p\)
+          <br />
+          Where: - \(CO2\) = carbon dioxide emissions in grams
+          <br />
+          - \(d\) = distance travelled (in kilometres)
+          <br />
+          - \(ec\) = energy consumption (in kWh/km)
+          <br />
+          - \(ci\) = carbon intensity of electricity production (in gCO₂/kWh),
+          here set at 240 gCO₂/kWh
+          <br />
+          - \(p\) = number of passengers
+          <br />
+        </p>
+        <p>
+          <div class="btn">
+            <a
+              href="{{ url_for('static', filename='documents/carbon_methodology_report.pdf') }}"
+              class="btn btn-primary btn-lg mr-2"
+              style="background-color: #407364"
+              target="_blank"
+            >
+            You can read more in our paper
+            </a>
+          </div>
+          <div class="btn">
+        </p>
+      </div>
     </div>
+  <div class="box_table1"></div>
+  </div>
 </section>
 
 {% endblock content %}
