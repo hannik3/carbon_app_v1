@@ -2,41 +2,21 @@
 
 <!-- Header -->
 <section class="section_header_carbon_app">
-  <div class="container">
-    <div class="header_carbon_app">
-      <div class="box">
-        <h1 style="font-size: 55px">
-          <span class="text-logo"> Carbon App Calculator</span>
-        </h1>
-        <p style="text-align: left"></p>
-        <div class="container_buttons_links_header_carbon_app">
-          <div class="btn">
-            <a
-              href="{{url_for('methodology.methodology_home')}}"
-              class="btn btn-primary btn-lg mr-2"
-              ,
-              style="background-color: #007bff"
-              >Methodology</a
-            >
-          </div>
-          <div class="btn">
-            <a
-              href="{{url_for('carbon_app.your_data')}}"
-              class="btn btn-primary btn-lg mr-2"
-              ,
-              style="background-color: #007bff"
-              >Your data</a
-            >
-          </div>
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="{{ url_for('static', filename='videos/201737-916318941_small.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="header_content">
+    <div class="text_box">
+      <h1 class="text-logo" style="font-size: 55px; color: white;">Carbon App Calculator</h1>
+      <div class="container_buttons_links_header_carbon_app">
+        <div class="btn">
+          <a href="{{url_for('methodology.methodology_home')}}" class="btn btn-primary btn-lg mr-2">Methodology</a>
         </div>
-      </div>
-      <div class="box">
-        <img
-          src="{{url_for('static', filename='icons/calculator.svg')}}"
-          width="325"
-          height="325"
-          alt=""
-        />
+        <div class="btn">
+          <a href="{{url_for('carbon_app.your_data')}}" class="btn btn-primary btn-lg mr-2">Your data</a>
+        </div>
       </div>
     </div>
   </div>
