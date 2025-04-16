@@ -18,9 +18,9 @@ p {
   overflow: hidden;
   color: white;
   display: flex;
-  align-items: flex-start;
-  padding-top: 100px;
+  align-items: flex-start; 
   justify-content: center;
+  padding-top: 80px; 
 }
 
 
