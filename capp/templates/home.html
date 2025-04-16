@@ -9,36 +9,33 @@
     Your browser does not support the video tag.
   </video>
 
-  <div class="container">
-    <div class="header_home">
-      <div class="box">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-          {% if messages %}
-            {% for category, message in messages %}
-              <div class="alert alert-{{ category }}">
-                {{ message }}
-              </div> 
-            {% endfor %}
-          {% endif %}
-        {% endwith %}
-        <script>
-          setTimeout(function () {
-            var flashes = document.querySelectorAll(".alert");
-            flashes.forEach((flash) => flash.remove());
-          }, 5000);
-        </script>
+ <div class="header_home">
+  <div class="box">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <script>
+      setTimeout(function () {
+        var flashes = document.querySelectorAll(".alert");
+        flashes.forEach((flash) => flash.remove());
+      }, 5000);
+    </script>
 
-        <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
-        <p style="text-align:left;">
-          It is crucial to inform the public about carbon emissions because of 
-          the growing awareness and responsibility we all share in addressing climate change, therefore we 
-          built this webpage. Carbon emissions are a significant contributor to global warming, and understanding 
-          their impact is essential for both individuals and businesses. A website that provides detailed information 
-          about carbon emissions allows people to learn about their carbon footprint, track their activities, 
+    <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
+    <p style="text-align:left;">
+      It is crucial to inform the public about carbon emissions because of
+          the growing awareness and responsibility we all share in addressing climate change, therefore we
+          built this webpage. Carbon emissions are a significant contributor to global warming, and understanding
+          their impact is essential for both individuals and businesses. A website that provides detailed information
+          about carbon emissions allows people to learn about their carbon footprint, track their activities,
           and take proactive steps to reduce their environmental impact.
-        </p>
-      </div>
-    </div>
+    </p>
+  </div>
+</div>
   </div>
 </section> 
 
