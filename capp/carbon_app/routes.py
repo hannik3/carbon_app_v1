@@ -31,8 +31,8 @@ efco2 = {
         'Fuel Oil': 0.114,         # No new data provided; kept original value
     },
     'Train': {
-        'Europe Electric': 0.026,
-        'Norway Electric': 0.007,  # Electric trains in Norway emit 7g CO₂ per passenger-km
+        'Electric': 0.026,
+        'Electric Norway': 0.007,  # Electric trains in Norway emit 7g CO₂ per passenger-km
         'Diesel': 0.091            # Diesel trains emit 91g CO₂ per passenger-km
     },
     'Motorbike': {
@@ -174,7 +174,32 @@ def new_entry_motorbike():
         db.session.add(emissions)
         db.session.commit()
         return redirect(url_for('carbon_app.your_data'))
-    return render_template('carbon_app/new_entry_motorbike.html', title='new entry motorbike', form=form) 
+    return render_template('carbon_app/new_entry_motorbike.html', title='new entry motorbike', form=form)
+
+#New entry train
+@carbon_app.route('/carbon_app/new_entry_train', methods=['GET','POST'])
+@login_required
+def new_entry_train():
+    form = TrainForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Train'
+        # kms = request.form['kms']
+        # fuel = request.form['fuel_type']
+
+        co2 = float(kms) * efco2[transport][fuel]
+        total = co2
+
+        co2 = float("{:.2f}".format(co2))
+        total = float("{:.2f}".format(total))
+
+        emissions = Transport(kms=kms, transport=transport, fuel=fuel, co2=co2, total=total, author=current_user)
+        db.session.add(emissions)
+        db.session.commit()
+        return redirect(url_for('carbon_app.your_data'))
+    return render_template('carbon_app/new_entry_train.html', title='new entry train', form=form)    
+
 
 #New entry bicycle
 @carbon_app.route('/carbon_app/new_entry_bicycle', methods=['GET','POST'])
@@ -273,6 +298,7 @@ def your_data():
         emission_transport[5]=first_tuple_elements[index_plane]
     else:
         emission_transport[5]
+    
 
     #Kilometers by category
     kms_by_transport = db.session.query(db.func.sum(Transport.kms), Transport.transport). \
@@ -331,7 +357,8 @@ def your_data():
         index_walk = second_tuple_elements.index('Walk')
         kms_transport[7]=first_tuple_elements[index_walk]
     else:
-        kms_transport[7]    
+        kms_transport[7] 
+   
 
     #Emissions by date (individual)
     emissions_by_date = db.session.query(db.func.sum(Transport.total), Transport.date). \
