@@ -220,6 +220,7 @@ border: none;
 .header_home .box {
   background: transparent; /* Remove green background from boxes */
 }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -230,5 +231,18 @@ border: none;
   z-index: 0;
   opacity: 1;
  }
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+.animate-slide-down {
+  animation: slideDownFade 1s ease-out;
+}
 
