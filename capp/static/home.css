@@ -181,6 +181,22 @@ border: none;
   color: #81C784;  /* Sehr sanftes Grün */
   text-decoration: none;
 }
+.img-container {
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) { 
