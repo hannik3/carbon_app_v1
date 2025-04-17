@@ -106,20 +106,16 @@ border: none;
   align-items: start;
   background: #d8cdc3; /* Sehr sanftes Grün */
 }
-.developers .box,
-.developers .box2 {
+.developers .box {
   flex: 1;
-  background: #90a897;
+  background: #90a897; /* Dunkleres Waldgrün */
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 500px; 
-}
+  text-align:center;
+  align-items: center;
+  justify-content: center;
 }
 .developers .box:nth-of-type(1) {
   flex-grow: 4;
@@ -130,7 +126,16 @@ border: none;
 .developers .box:nth-of-type(3) {
   flex-grow: 4;
 }
-
+.developers .box2 {
+  flex: 1;
+  background: #90a897; /* Dunkleres Waldgrün */
+  color: black;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
 }
 .developers .box2:nth-of-type(1) {
   flex-grow: 4;
@@ -140,7 +145,7 @@ border: none;
 }
 .developers .box2:nth-of-type(3) {
   flex-grow: 4;
- 
+  background: #90a897; /* Sehr sanftes Grün */
 }
 .devlopers img {
   overflow-clip-margin: content-box;
@@ -160,13 +165,13 @@ border: none;
 }
 
 .section_container_buttons_developers {
-  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0px 0px;
+  margin: 0px 0px;
 }
-
 .btn_developers {
   padding: 10px 10px;
   margin: 10px 10px 10px 10px;
@@ -181,22 +186,7 @@ border: none;
   color: #81C784;  /* Sehr sanftes Grün */
   text-decoration: none;
 }
-.img-container {
-  width: 200px;
-  height: 200px;
-  justify-self: center;
-  margin: 0 auto 20px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.img-container img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) { 
