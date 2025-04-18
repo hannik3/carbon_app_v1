@@ -298,6 +298,12 @@ def your_data():
         emission_transport[5]=first_tuple_elements[index_plane]
     else:
         emission_transport[5]
+
+    if 'Train' in second_tuple_elements:
+        index_train = second_tuple_elements.index('Train')
+        emission_transport[7]=first_tuple_elements[index_train]
+    else:
+        emission_transport[7]
     
 
     #Kilometers by category
@@ -345,17 +351,16 @@ def your_data():
         index_plane = second_tuple_elements.index('Plane')
         kms_transport[5]=first_tuple_elements[index_plane]
     else:
-        kms_transport[5]
-
-    if 'Scooter' in second_tuple_elements:
-        index_scooter = second_tuple_elements.index('Scooter')
-        kms_transport[6]=first_tuple_elements[index_scooter]
-    else:
-        kms_transport[6]     
+        kms_transport[5] 
 
     if 'Walk' in second_tuple_elements:
         index_walk = second_tuple_elements.index('Walk')
-        kms_transport[7]=first_tuple_elements[index_walk]
+        kms_transport[6]=first_tuple_elements[index_walk]
+    else:
+        kms_transport[6]
+    if 'Train' in second_tuple_elements:
+        index_train = second_tuple_elements.index('Train')
+        kms_transport[7]=first_tuple_elements[index_train]
     else:
         kms_transport[7] 
    
