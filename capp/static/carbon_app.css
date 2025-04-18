@@ -346,3 +346,11 @@ h4 {
     text-align: center;
   }
 }
+.carbon_app_new_entry_main .box {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.carbon_app_new_entry_main .box:hover {
+  transform: scale(1.05);
+}
